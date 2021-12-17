@@ -37,7 +37,7 @@ def fullPuzzle(originalPuzzle):
     extendedPuzzle = np.concatenate([increaseBy(originalPuzzle,x) for x in range(5)], axis=1)
     return np.concatenate([increaseBy(extendedPuzzle,x) for x in range(5)], axis=0)
 
-with open('day15/input.txt') as f:
+with open('input.txt') as f:
     puzzle_part1 = np.array([[int(y) for y in list(x.strip())] for x in f.readlines()])
     start = time.time()
     print(f"Risk Part 1: {lowestRisk(puzzle_part1)}")
